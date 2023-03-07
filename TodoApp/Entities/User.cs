@@ -13,5 +13,7 @@ namespace TodoApp.Entities
         [JsonIgnore]
         public string Password { get; set; }
         public Role Role { get; set; }
+        [JsonIgnore]
+        public List<RefreshToken> RefreshTokens { get; set; }
     }
 }

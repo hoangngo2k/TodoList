@@ -68,7 +68,7 @@ namespace TestTodoApp.ServiceTest
             _context.SetupGet(c => c.Todos).Returns(mockDbSet.Object);
 
             var result = service.GetById(id);
-
+            var item = result.CreatedDate;
             Assert.NotNull(result);
             Assert.Equal(id, result.Id);
         }              
